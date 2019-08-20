@@ -1,0 +1,25 @@
+ reg isJmpr, //! Jump signal register 
+    reg isBeqr, //! BEQ signal register
+    reg isBner, //! BNE signal register
+    reg [1:0] rfWriteDataSelr, //! Register File Write Data Select register
+    reg rfWriteAddrSelr, //! Register File Write Address Select register
+    reg rfWriteEnabler, //! Register Write Enable register
+    reg memWriter, //! Memory Write register
+    reg memReadr, //! Memory Read register
+    reg aluSrcr, //! ALU source register
+    reg [2:0] aluFuncr, //! ALU operation register
+    reg bitXtendr, //! Bit extension, 0 = sign extend, 1 = zero extend register
+    reg invOpcoder//! Invalid opcode or function register
+
+    assign isJmp=isJmpr; //! Jump signal
+    assign isBeq=isBeqr; //! BEQ signal
+    assign isBne=isBner; //! BNE signal
+    assign rfWriteDataSel=rfWriteDataSelr; //! Register File Write Data Select
+    assign rfWriteAddrSel=rfWriteAddrSelr, //! Register File Write Address Select
+    assign rfWriteEnable=rfWriteEnabler, //! Register Write Enable
+    assign memWrite=memWriter; //! Memory Write
+    assign memRead=memReadr;//! Memory Read
+    assign aluSrc=aluSrcr; //! ALU source
+    assign aluFunc=aluFuncr; //! ALU operation
+    assign bitXtend=bitXtendr; //! Bit extension, 0 = sign extend, 1 = zero extend
+    assign invOpcode=invOpcoder; 
